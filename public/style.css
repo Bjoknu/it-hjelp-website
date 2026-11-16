@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  min-width: 100%;
+  height: 100vh;
+  object-position: center;
+  display: block;
+  background-size: cover;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  height: 5rem;
+  min-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(77, 77, 77, 0.452);
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  color: #f7f7f7;
+  text-shadow: 5px 1px black;
+  padding-left: 5rem;
+}
+
+.navlinks {
+  list-style-type: none;
+  gap: 1rem;
+  display: flex;
+}
+
+.navlinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navlinks a:hover {
+  color: #6372ffd0;
+}
+
+.navlinks::after {
+  color: white;
+}
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 5px 1px rgb(41, 41, 41);
+}
+
+.paragraf-main {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 1rem;
+}
+
+.paragraf-main a {
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-shadow: 5px 1px rgb(41, 41, 41);
+}
