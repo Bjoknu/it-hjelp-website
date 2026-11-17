@@ -1,13 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tjenester</title>
+    <meta
+      name="description"
+      content="Få hjelp med PC, nettverk, IT-support og digital sikkerhet hos Fjordvik IT-Hjelp."
+    />
+    <title>IT-tjenester | Fjordvik IT-Hjelp</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
-  <body>
-    <%- include("partials/navbar")%>
-    <img src="/images/tjenester.jpg" alt="Person som hjelper" />
+  <body class="content-page services-page">
+    <%- include("partials/navbar") %>
+
+    <main>
+      <section class="services-hero" aria-labelledby="services-title">
+        <div class="services-hero__content">
+          <p class="services-eyebrow">IT-hjelp for hjem og småbedrifter</p>
+          <h1 id="services-title">IT som bare fungerer.</h1>
+          <p class="services-hero__intro">
+            Vi gjør teknologien enklere. Få praktisk hjelp med alt fra en treg
+            PC til nettverk og trygg lagring av filene dine.
+          </p>
+          <a class="services-button" href="#tjenester"
+            >Se hva vi kan hjelpe med</a
+          >
+        </div>
+        <div class="services-hero__visual">
+          <img
+            class="services-hero__image"
+            src="/images/tjenester.jpg"
+            alt="IT-medarbeider som hjelper en kunde"
+          />
+          <p class="services-hero__note">Personlig hjelp. Enkle løsninger.</p>
+        </div>
+      </section>
+
+      <section
+        class="services-list"
+        id="tjenester"
+        aria-labelledby="services-list-title"
+      >
+        <div class="services-section-heading">
+          <p class="services-eyebrow">Dette kan vi hjelpe deg med</p>
+          <h2 id="services-list-title">Tjenester som gjør hverdagen enklere</h2>
+          <p>
+            Enten du trenger en rask løsning eller hjelp til å komme godt i
+            gang, finner vi ut av det sammen.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-card__number" aria-hidden="true">01</span>
+            <h3>IT-support og feilsøking</h3>
+            <p>
+              Hjelp når PC-en er treg, programmer ikke virker, eller du står
+              fast med en teknisk utfordring.
+            </p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__number" aria-hidden="true">02</span>
+            <h3>PC og utstyr</h3>
+            <p>
+              Råd om valg av utstyr, oppsett av ny PC og hjelp med skriver,
+              skjerm og annet tilbehør.
+            </p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__number" aria-hidden="true">03</span>
+            <h3>Nettverk og Wi-Fi</h3>
+            <p>
+              Få bedre dekning og en stabil tilkobling hjemme eller på
+              arbeidsplassen.
+            </p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__number" aria-hidden="true">04</span>
+            <h3>Sikkerhet og backup</h3>
+            <p>
+              Kom i gang med sikkerhetskopiering og gode vaner som beskytter
+              enhetene og filene dine.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="services-callout" aria-label="Neste steg">
+        <div>
+          <p class="services-eyebrow">Usikker på hva du trenger?</p>
+          <h2>Vi hjelper deg med å finne ut av det.</h2>
+        </div>
+        <a class="services-button services-button--light" href="#tjenester">
+          Utforsk tjenestene
+        </a>
+      </section>
+    </main>
   </body>
 </html>

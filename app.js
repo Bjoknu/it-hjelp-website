@@ -14,6 +14,14 @@ app.get("/tjenester", (req, res) => {
   return res.render("tjenester");
 });
 
+app.get("/Kontakt", (req, res) => {
+  return res.render("Kontakt");
+});
+
+app.get("/Informasjon", (req, res) => {
+  return res.render("informasjon");
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
