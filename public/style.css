@@ -3,6 +3,7 @@
   margin: 0;
 }
 
+/* Bilde og meny på startsiden. */
 .imgone {
   min-width: 100%;
   height: 100vh;
@@ -53,37 +54,46 @@
 .navlinks::after {
   color: white;
 }
-h1 {
-  text-align: center;
-  font-size: 5rem;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: 5px 1px rgb(41, 41, 41);
-}
 
+/* Tekst som vises oppå bildet på startsiden. */
 .paragraf-main {
   position: absolute;
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: (77, 77, 77, 0.1);
   top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   gap: 1rem;
+  z-index: 2;
 }
 
-.paragraf-main a {
-  font-size: 3rem;
+.hero-text {
+  display: block;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  text-shadow: 5px 1px rgb(41, 41, 41);
+  color: #fff;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 18px rgba(0, 0, 0, 0.45);
 }
 
-/* Tjeneste siden */
+.paragraf-main a.hero-text {
+  font-size: clamp(1.3rem, 2vw, 2.8rem);
+  text-decoration: none;
+}
+
+.paragraf-box {
+  background-color: rgba(18, 18, 18, 0.26);
+  padding: 1.5rem 2rem;
+  border-radius: 0.75rem;
+}
+
+.paragraf-box h1.hero-text {
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
 
 .imgtwo {
   position: absolute;
@@ -96,6 +106,7 @@ h1 {
   background-size: cover;
 }
 
+/* Felles stil for tjeneste-, kontakt- og informasjonssidene. */
 .content-page {
   color: #172a3a;
   background-color: #f5f8fa;
@@ -106,6 +117,7 @@ h1 {
   padding-top: 5rem;
 }
 
+/* Toppfeltet på tjenestesiden. */
 .services-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
@@ -176,7 +188,15 @@ h1 {
 
 .services-hero__visual {
   position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
   padding: 0 0 1.5rem 1.5rem;
+  border-radius: 0.75rem;
 }
 
 .services-hero__visual::before {
@@ -195,10 +215,12 @@ h1 {
   position: relative;
   z-index: 1;
   display: block;
-  width: 100%;
-  height: 360px;
+  width: calc(100% - 1.5rem);
+  max-width: calc(100% - 1.5rem);
+  height: clamp(260px, 32vw, 360px);
   border-radius: 0.75rem;
   object-fit: cover;
+  object-position: center;
   box-shadow: 0 1.25rem 3rem rgba(23, 42, 58, 0.14);
 }
 
@@ -210,6 +232,7 @@ h1 {
   font-size: 0.9rem;
 }
 
+/* Kortene med tjenestene og lenken under dem. */
 .services-list {
   padding: 5rem max(2rem, calc((100% - 1120px) / 2)) 5.5rem;
   background-color: #fff;
@@ -300,6 +323,7 @@ h1 {
   background-color: #e7f2f2;
 }
 
+/* Tilpasser tjenestesiden til mindre skjermer. */
 @media (max-width: 900px) {
   .services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -382,6 +406,7 @@ h1 {
   padding: 4.5rem 2rem 2.5rem;
 }
 
+/* Felles overskrift og tekst på innholdssidene. */
 .content-page .content-hero h1 {
   position: static;
   max-width: 800px;
@@ -410,6 +435,7 @@ h1 {
   padding: 0 2rem;
 }
 
+/* Kontaktinfo, knapper og kontaktkort. */
 .contact-panel,
 .contact-help {
   padding: clamp(1.5rem, 4vw, 2.75rem);
@@ -455,6 +481,10 @@ h1 {
   overflow-wrap: anywhere;
 }
 
+.contact-hours {
+  list-style: none;
+}
+
 .contact-method:hover {
   background-color: #eaf3f3;
 }
@@ -483,6 +513,7 @@ h1 {
   margin-top: 1.5rem;
 }
 
+/* Informasjonsseksjonen med de tre stegene. */
 .information-section {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -527,6 +558,7 @@ h1 {
   line-height: 1.6;
 }
 
+/* Tilpasser innholdssidene til små skjermer. */
 @media (max-width: 680px) {
   .content-hero {
     padding: 3rem 1.25rem 2rem;

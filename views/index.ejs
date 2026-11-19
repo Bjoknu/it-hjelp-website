@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Grunninfo for siden og lenke til stilarket. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+    <!-- Viser menyen som brukes på alle sidene. -->
     <%- include("partials/navbar")%>
-    <h1>Velkommen til IT-Hjelp</h1>
+    <!-- Velkomsttekst som ligger over bakgrunnsbildet. -->
     <div class="paragraf-main">
-      <a>Har du spørsmål eller utfordringer?</a>
-      <a>Ta gjerne kontakt med oss!</a>
+      <div class="paragraf-box">
+        <h1 class="hero-text">Velkommen til IT-Hjelp</h1>
+        <a class="hero-text">Har du spørsmål eller utfordringer?</a>
+        <a class="hero-text">Ta gjerne kontakt med oss!</a>
+        <a class="services-button" href="/kontakt">Kontakt</a>
+      </div>
     </div>
+    <!-- Bakgrunnsbilde på startsiden. -->
     <img class="imgone" src="/images/Helpdesk.jpg" alt="Bilde av helpdesk" />
   </body>
 </html>

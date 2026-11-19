@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="nb">
+<html lang="en">
   <head>
+    <!-- Grunninfo for siden og lenke til stilarket. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -11,9 +12,11 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body class="content-page services-page">
+    <!-- Viser menyen som brukes på alle sidene. -->
     <%- include("partials/navbar") %>
 
     <main>
+      <!-- Første del av siden med tekst og bilde. -->
       <section class="services-hero" aria-labelledby="services-title">
         <div class="services-hero__content">
           <p class="services-eyebrow">IT-hjelp for hjem og småbedrifter</p>
@@ -36,6 +39,7 @@
         </div>
       </section>
 
+      <!-- Liste over hjelpen vi tilbyr. -->
       <section
         class="services-list"
         id="tjenester"
@@ -86,6 +90,7 @@
         </div>
       </section>
 
+      <!-- Oppfordrer besøkende til å se tjenestene. -->
       <section class="services-callout" aria-label="Neste steg">
         <div>
           <p class="services-eyebrow">Usikker på hva du trenger?</p>

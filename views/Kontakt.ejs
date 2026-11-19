@@ -1,54 +1,78 @@
 <!DOCTYPE html>
-<html lang="nb">
+<html lang="no">
   <head>
+    <!-- Grunninfo for siden og lenke til stilarket. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Kontakt Fjordvik IT-Hjelp for hjelp med PC, nettverk og andre IT-utfordringer."
+      content="Kontakt Fjordvik IT-Hjelp for hjelp med IT-support, utstyr og digitale løsninger."
     />
     <title>Kontakt | Fjordvik IT-Hjelp</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body class="content-page contact-page">
+    <!-- Viser menyen som brukes på alle sidene. -->
     <%- include("partials/navbar") %>
 
     <main>
+      <!-- Introduserer kontaktsiden. -->
       <section class="content-hero" aria-labelledby="contact-title">
-        <p class="services-eyebrow">Kontakt oss</p>
-        <h1 id="contact-title">Vi hjelper deg gjerne.</h1>
+        <p class="services-eyebrow">Kontakt</p>
+        <h1 id="contact-title">Vi hjelper deg videre.</h1>
         <p class="content-hero__intro">
-          Har du spørsmål eller trenger hjelp med IT? Ta kontakt, så finner vi
-          ut av hva du trenger.
+          Har du spørsmål om IT-support, utstyr eller hvordan du kan få mer
+          trygghet i hverdagen digitalt? Vi er klare til å hjelpe deg.
         </p>
       </section>
 
-      <section class="contact-layout" aria-label="Kontaktinformasjon">
+      <!-- Viser kontaktmåter og neste steg. -->
+      <section class="contact-layout" aria-labelledby="contact-methods-title">
         <div class="contact-panel">
-          <p class="services-eyebrow">Slik når du oss</p>
-          <h2>Ta kontakt</h2>
+          <p class="services-eyebrow">Kontaktinformasjon</p>
+          <h2 id="contact-methods-title">Ta kontakt</h2>
           <p>
-            Fortell oss kort hva du trenger hjelp med, så tar vi det derfra.
+            Send oss en melding, ring eller besøk oss for en uforpliktende prat
+            om hva du trenger hjelp med.
           </p>
+
+          <!-- Telefon, e-post, adresse og åpningstider. -->
           <div class="contact-methods">
-            <a class="contact-method" href="mailto:exemple@gmail.com">
-              <span class="contact-method__label">E-post</span>
-              <span>exemple@gmail.com</span>
-            </a>
-            <a class="contact-method" href="tel:00000000">
+            <div class="contact-method">
+              <span class="contact-method__label">Åpningstider</span>
+              <ul class="contact-hours">
+                <li>Mandag–fredag: kl. 08:00–16:00</li>
+                <li>Lørdag–søndag: Fri</li>
+              </ul>
+            </div>
+            <a class="contact-method" href="tel:+4799999999">
               <span class="contact-method__label">Telefon</span>
-              <span>00000000</span>
+              +47 99 99 99 99
+            </a>
+            <a class="contact-method" href="mailto:kontaktIT@fjordvik.no">
+              <span class="contact-method__label">E-post</span>
+              kontakt@fjordvikIT.no
+            </a>
+            <a
+              class="contact-method"
+              href="https://maps.google.com/?q=Fjordvik"
+            >
+              <span class="contact-method__label">Adresse</span>
+              Fjordvik, Norge
             </a>
           </div>
         </div>
 
         <aside class="contact-help">
-          <h2>Hva kan vi hjelpe med?</h2>
+          <p class="services-eyebrow">Neste steg</p>
+          <h2>Få hjelp uten stress.</h2>
           <p>
-            Du kan ta kontakt om alt fra en treg PC til problemer med nettverk,
-            utstyr eller sikkerhetskopiering.
+            Beskriv kort hva som ikke fungerer, og vi kan komme med et praktisk
+            forslag til neste steg.
           </p>
-          <a class="services-button" href="/tjenester">Se alle tjenestene</a>
+          <a class="services-button" href="mailto:kontakt@fjordvik.no">
+            Send e-post
+          </a>
         </aside>
       </section>
     </main>
