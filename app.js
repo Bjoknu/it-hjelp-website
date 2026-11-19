@@ -26,6 +26,11 @@ app.get(["/informasjon", "/info", "/Informasjon"], (req, res) => {
   return res.render("info");
 });
 
+// Viser siden med Info ny ansatte.
+app.get(["/Newemploy", "/newemploy", "/ny-ansatte"], (req, res) => {
+  return res.render("Newemploy");
+});
+
 // Starter nettsiden på porten.
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

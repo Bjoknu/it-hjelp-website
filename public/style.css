@@ -1,6 +1,20 @@
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+:root {
+  --navy-950: #07162d;
+  --navy-900: #102a46;
+  --navy-800: #173c63;
+  --blue-600: #2f6fbd;
+  --blue-500: #4b83cf;
+  --ice-100: #edf4fa;
+  --ice-50: #f7f9fc;
+  --text: #10243a;
+  --text-muted: #5d6d7d;
+  --border: #dce5ee;
 }
 
 /* Bilde og meny på startsiden. */
@@ -108,8 +122,8 @@
 
 /* Felles stil for tjeneste-, kontakt- og informasjonssidene. */
 .content-page {
-  color: #172a3a;
-  background-color: #f5f8fa;
+  color: var(--text);
+  background-color: var(--ice-50);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -135,7 +149,7 @@
 
 .services-eyebrow {
   margin-bottom: 1rem;
-  color: #167c80;
+  color: var(--blue-600);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -145,7 +159,7 @@
 .services-page .services-hero h1 {
   position: static;
   margin: 0 0 1.25rem;
-  color: #172a3a;
+  color: var(--text);
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1.04;
   text-align: left;
@@ -156,7 +170,7 @@
 .services-hero__intro {
   max-width: 490px;
   margin-bottom: 2rem;
-  color: #526371;
+  color: var(--text-muted);
   font-size: 1.15rem;
   line-height: 1.75;
 }
@@ -168,7 +182,7 @@
   justify-content: center;
   padding: 0.8rem 1.4rem;
   border-radius: 0.35rem;
-  background-color: #167c80;
+  background-color: var(--blue-600);
   color: #fff;
   font-size: 0.95rem;
   font-weight: 700;
@@ -178,11 +192,11 @@
 
 .services-button:hover {
   transform: translateY(-2px);
-  background-color: #10666a;
+  background-color: var(--navy-800);
 }
 
 .services-button:focus-visible {
-  outline: 3px solid #f2b84b;
+  outline: 3px solid #a9c7ef;
   outline-offset: 3px;
 }
 
@@ -207,7 +221,7 @@
   bottom: 0;
   left: 0;
   border-radius: 0.75rem;
-  background-color: #dcebed;
+  background-color: #dfeaf5;
   content: "";
 }
 
@@ -228,7 +242,7 @@
   position: relative;
   z-index: 1;
   margin: 1rem 0 0 1rem;
-  color: #526371;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
@@ -246,13 +260,13 @@
 .services-section-heading h2,
 .services-callout h2 {
   margin-bottom: 1rem;
-  color: #172a3a;
+  color: var(--text);
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.15;
 }
 
 .services-section-heading > p:last-child {
-  color: #61717e;
+  color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.7;
 }
@@ -266,7 +280,7 @@
 .service-card {
   min-height: 220px;
   padding: 1.6rem;
-  border: 1px solid #e3eaed;
+  border: 1px solid var(--border);
   border-radius: 0.6rem;
   background-color: #fff;
   box-shadow: 0 0.5rem 1.5rem rgba(23, 42, 58, 0.045);
@@ -275,7 +289,7 @@
 .service-card__number {
   display: inline-block;
   margin-bottom: 1.4rem;
-  color: #167c80;
+  color: var(--blue-600);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -283,12 +297,12 @@
 
 .service-card h3 {
   margin-bottom: 0.75rem;
-  color: #172a3a;
+  color: var(--text);
   font-size: 1.15rem;
 }
 
 .service-card p {
-  color: #61717e;
+  color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.65;
 }
@@ -300,11 +314,11 @@
   gap: 2rem;
   margin: 4rem auto;
   padding: 2.5rem max(2rem, calc((100% - 1120px) / 2));
-  background-color: #172a3a;
+  background-color: var(--navy-950);
 }
 
 .services-callout .services-eyebrow {
-  color: #8fd1cc;
+  color: #b9cdf0;
 }
 
 .services-callout h2 {
@@ -316,11 +330,11 @@
 .services-button--light {
   flex: 0 0 auto;
   background-color: #fff;
-  color: #172a3a;
+  color: var(--text);
 }
 
 .services-button--light:hover {
-  background-color: #e7f2f2;
+  background-color: var(--ice-100);
 }
 
 /* Tilpasser tjenestesiden til mindre skjermer. */
@@ -411,7 +425,7 @@
   position: static;
   max-width: 800px;
   margin: 0 0 1.25rem;
-  color: #172a3a;
+  color: var(--text);
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1.04;
   text-align: left;
@@ -421,7 +435,7 @@
 
 .content-hero__intro {
   max-width: 680px;
-  color: #526371;
+  color: var(--text-muted);
   font-size: 1.15rem;
   line-height: 1.75;
 }
@@ -439,7 +453,7 @@
 .contact-panel,
 .contact-help {
   padding: clamp(1.5rem, 4vw, 2.75rem);
-  border: 1px solid #e3eaed;
+  border: 1px solid var(--border);
   border-radius: 0.6rem;
   background-color: #fff;
   box-shadow: 0 0.5rem 1.5rem rgba(23, 42, 58, 0.045);
@@ -449,7 +463,7 @@
 .contact-help h2,
 .information-copy h2 {
   margin-bottom: 0.85rem;
-  color: #172a3a;
+  color: var(--text);
   font-size: clamp(1.6rem, 3vw, 2.15rem);
   line-height: 1.2;
 }
@@ -457,7 +471,7 @@
 .contact-panel > p:not(.services-eyebrow),
 .contact-help > p,
 .information-copy > p:not(.services-eyebrow) {
-  color: #61717e;
+  color: var(--text-muted);
   font-size: 1rem;
   line-height: 1.7;
 }
@@ -474,8 +488,8 @@
   gap: 0.35rem;
   padding: 1rem;
   border-radius: 0.4rem;
-  background-color: #f5f8fa;
-  color: #167c80;
+  background-color: var(--ice-50);
+  color: var(--blue-600);
   font-weight: 700;
   text-decoration: none;
   overflow-wrap: anywhere;
@@ -486,16 +500,16 @@
 }
 
 .contact-method:hover {
-  background-color: #eaf3f3;
+  background-color: var(--ice-100);
 }
 
 .contact-method:focus-visible {
-  outline: 3px solid #f2b84b;
+  outline: 3px solid #a9c7ef;
   outline-offset: 3px;
 }
 
 .contact-method__label {
-  color: #61717e;
+  color: var(--text-muted);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -506,7 +520,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-color: #eaf3f3;
+  background-color: var(--ice-100);
 }
 
 .contact-help .services-button {
@@ -537,7 +551,7 @@
   display: flex;
   gap: 1.25rem;
   padding: 1.4rem;
-  border: 1px solid #e3eaed;
+  border: 1px solid var(--border);
   border-radius: 0.6rem;
   background-color: #fff;
 }
@@ -549,12 +563,12 @@
 
 .information-step h3 {
   margin-bottom: 0.4rem;
-  color: #172a3a;
+  color: var(--text);
   font-size: 1.05rem;
 }
 
 .information-step p {
-  color: #61717e;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
