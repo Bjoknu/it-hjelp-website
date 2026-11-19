@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Grunninfo for siden og lenke til stilarket. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Les mer om Fjordvik IT-Hjelp og hvordan vi gjør IT enklere."
+    />
+    <title>Informasjon | Fjordvik IT-Hjelp</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="content-page information-page">
+    <!-- Viser menyen som brukes på alle sidene. -->
+    <%- include("partials/navbar") %>
+
+    <main>
+      <!-- Kort introduksjon til Fjordvik IT-Hjelp. -->
+      <section class="content-hero" aria-labelledby="information-title">
+        <p class="services-eyebrow">Om Fjordvik IT-Hjelp</p>
+        <h1 id="information-title">IT-hjelp som er lett å forstå.</h1>
+        <p class="content-hero__intro">
+          Vi ønsker å gjøre teknologien enklere med praktisk hjelp, tydelige råd
+          og løsninger som passer behovet ditt.
+        </p>
+      </section>
+
+      <!-- Forklarer hvordan vi hjelper kunder videre. -->
+      <section class="information-section" aria-labelledby="approach-title">
+        <div class="information-copy">
+          <p class="services-eyebrow">Vår tilnærming</p>
+          <h2 id="approach-title">En løsning som passer for deg</h2>
+          <p>
+            IT-problemer kan være frustrerende. Derfor starter vi med å forstå
+            hva som ikke fungerer og hva du ønsker å få til. Vi forklarer
+            alternativene på en enkel måte, slik at du kan velge veien videre.
+          </p>
+          <a class="services-button" href="/kontakt">Ta kontakt</a>
+        </div>
+
+        <div class="information-steps">
+          <article class="information-step">
+            <span class="service-card__number" aria-hidden="true">01</span>
+            <div>
+              <h3>Fortell hva du trenger</h3>
+              <p>Beskriv utfordringen eller spørsmålet ditt.</p>
+            </div>
+          </article>
+          <article class="information-step">
+            <span class="service-card__number" aria-hidden="true">02</span>
+            <div>
+              <h3>Vi ser på mulighetene</h3>
+              <p>Du får hjelp til å forstå hva som kan løse problemet.</p>
+            </div>
+          </article>
+          <article class="information-step">
+            <span class="service-card__number" aria-hidden="true">03</span>
+            <div>
+              <h3>Kom videre med IT-en</h3>
+              <p>Få praktiske råd eller hjelp med neste steg.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Lenke videre til tjenestene. -->
+      <section class="services-callout" aria-label="IT-tjenester">
+        <div>
+          <p class="services-eyebrow">IT-support, utstyr og mer</p>
+          <h2>Se hvordan vi kan hjelpe deg.</h2>
+        </div>
+        <a class="services-button services-button--light" href="/tjenester">
+          Utforsk tjenestene
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
